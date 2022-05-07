@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" class="antialiased">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- seo -%}
+  <link rel="stylesheet" href="{% link /assets/css/app.css %}">
+</head>
+<body class="font-sans leading-normal tracking-wider text-gray-900 bg-gray-100">
+  {%- include header.html -%}
+  {%- include nav-lab.html -%}
+
+  <main aria-label="Content">
+    {{ content }}
+  </main>
+
+  {%- include footer.html -%}
+
+  <script src="{% link /assets/js/app.js %}"></script>
+  <script src="https://cdn.rawgit.com/amanuel/JS-HTML5-QRCode-Generator/master/qrcode.js"></script>
+  <script src="https://cdn.rawgit.com/amanuel/JS-HTML5-QRCode-Generator/master/html5-qrcode.js"></script>
+
+  <script>
+  function updateQRCode() {
+    var ssid = document.getElementById("ssid").value;
+    var pw = document.getElementById("password").value;
+    var enc = document.getElementById("enc").value;
+    var hidden = document.getElementById("hidden").checked;
+    var qrcode = document.getElementById("qrcode");
+
+    var text = "WIFI:S:" + ssid + ";T:" + enc + ";P:" + pw + ";H:" + hidden + ";;";
+
+    qrcode.replaceChild(showQRCode(text), qrcode.lastChild);
+  }
+
+  document.getElementById("form").onchange = updateQRCode;
+  </script>
+
+</body>
+</html>
