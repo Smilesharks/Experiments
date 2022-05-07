@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="{% link /assets/css/app.css %}">
 </head>
 <body class="font-sans leading-normal tracking-wider text-gray-900 bg-gray-100">
+  {%- include header.html -%}
   {%- include nav-lab.html -%}
 
   <main aria-label="Content">
@@ -15,7 +16,5 @@
   </main>
 
   {%- include footer.html -%}
-
-  <script src="{% link /assets/js/app.js %}"></script>
 </body>
 </html>

@@ -6,16 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- seo -%}
   <link rel="stylesheet" href="{% link /assets/css/app.css %}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
 </head>
 <body class="font-sans leading-normal tracking-wider text-gray-900 bg-gray-100">
   {%- include nav-lab.html -%}
-
   <main aria-label="Content">
     {{ content }}
   </main>
-
-  {%- include footer.html -%}
-
-  <script src="{% link /assets/js/app.js %}"></script>
 </body>
 </html>

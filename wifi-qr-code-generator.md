@@ -1,7 +1,14 @@
 ---
 layout: qr
 title: Wifi QR code generator
+status: OK
 ---
+
+<style>
+	#qrcode img {
+		mix-blend-mode: multiply;
+	}
+</style>
 
 <div class="relative flex flex-col justify-center min-h-screen py-6 overflow-hidden bg-gray-50 sm:py-12">
 	<img src="https://play.tailwindcss.com/img/beams.jpg" alt="" class="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 max-w-none" width="1308" />
@@ -32,7 +39,7 @@ title: Wifi QR code generator
 					<input class="block mt-1" type="checkbox" id="hidden">
 				</label>
 			</div>
-			<span id="qrcode" class="py-0 rounded-xl bg-gradient-to-r from-pink-500 via-teal-500 to-purple-500 ">
+			<span id="qrcode" class="p-2 mx-auto rounded-xl bg-gradient-to-r from-pink-500 via-teal-500 to-purple-500 ">
 			</span>
 			<div class="print:hidden">
 				<div class="flex flex-row space-x-2 ">
