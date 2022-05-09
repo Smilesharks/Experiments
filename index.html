@@ -11,16 +11,20 @@ title: Home
             </div>
             <div class="border-t border-gray-200">
                 <dl>
-					{% for node in site.html_pages %}
-						{% if page.url == node.url %}
-						<li class="hidden"><a href="{{node.url}}" class="active">{{node.title}}</a></li>
-						{% else %}
+                    <div class="px-4 py-5 font-mono font-bold bg-white sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt>Name</dt>
+                    <dd>Link</dd>
+                    <dd>Status</dd>
+                    </div>
+                </dl>
+                <dl>
+                    {% for lab in site.lab %}
+						<li class="hidden"><a href="{{lab.url}}" class="active">{{lab.title}}</a></li>
 							<div class="px-4 py-5 bg-gray-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-								<dt class="text-sm font-medium text-gray-500">{{ node.title }}</dt>
-								<dd class="mt-1 text-sm text-gray-900 sm:mt-0"><a href="{{ node.url }}">Preview</a></dd>
-                                <dd class="mt-1 text-sm text-gray-900 sm:mt-0">{{ node.status }}</dd>
+								<dt class="text-sm font-medium text-gray-500">{{ lab.title }}</dt>
+								<dd class="mt-1 text-sm text-gray-900 sm:mt-0"><a href="{{ lab.url }}">Preview</a></dd>
+                                <dd class="mt-1 text-sm text-gray-900 sm:mt-0">{{ lab.status }}</dd>
 							</div>
-						{% endif %}
 					{% endfor %}
                 </dl>
             </div>

@@ -1,6 +1,7 @@
 ---
 layout: qr
 title: Wifi QR code generator
+date: 2022-05-09 19:12 +1200
 status: OK
 ---
 

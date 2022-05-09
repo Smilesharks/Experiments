@@ -7,6 +7,11 @@ date_format: "%b %-d, %Y"
 jekyll_compose:
   auto_open: true
 
+collections:
+  lab:
+    output: true
+    permalink: /lab/:name
+
 exclude:
   - "package*.json"
   - "*.config.js"
