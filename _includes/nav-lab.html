@@ -28,10 +28,15 @@
 				
 
                 <div :class="{'block pb-8 lg:pb-0': open, 'hidden': !open}" class="flex items-center justify-center hidden lg:block">
-                    <div class="flex flex-col md:space-x-6 md:flex-row">
-                        <a href="/" title="" class="inline-flex items-center justify-center px-4 py-2 text-base font-bold text-white transition-all bg-gray-800 border-2 border-gray-200 rounded-xl" role="button">
-                            Back
+					<div class="flex flex-col md:space-x-2 md:flex-row">
+						<a href="https://www.arielcerda.com/portfolio/" title="" class="inline-flex items-center justify-center px-4 py-2 text-base font-bold text-black transition bg-yellow-500 border-2 border-gray-100 hover:bg-yellow-400 rounded-xl" role="button">
+							Back to portfolio
+						</a>
+						{% if page.url != "/" %}
+                        <a href="/" title="" class="inline-flex items-center justify-center px-4 py-2 text-base font-bold text-white transition bg-gray-800 border-2 border-gray-200 hover:bg-gray-600 rounded-xl" role="button">
+                            Back to index
                         </a>
+						{% endif %}
                     </div>
                 </div>
             </div>
